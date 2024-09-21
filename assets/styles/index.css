@@ -1,0 +1,288 @@
+:root {
+  --color-primary-light: hsl(207, 20%, 30%);
+  --color-primary: hsl(207, 20%, 25%);
+  --color-primary-dark: hsl(207, 20%, 20%);
+  --color-secondary-lightest: hsl(26, 20%, 95%);
+  --color-secondary-light: hsl(26, 20%, 85%);
+  --color-secondary: hsl(26, 20%, 75%);
+  --color-secondary-dark: hsl(26, 20%, 65%);
+  --color-text-shadow: hsl(0, 93%, 12%);
+  --fs-default: clamp(0.5rem, 1.6vw + 0.2rem, 1rem);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--fs-default);
+}
+
+body {
+  height: 100vh;
+  height: 100svh;
+  font-family: 'roboto', sans-serif;
+  font-weight: 300;
+  color: var(--color-secondary-lightest);
+  text-align: center;
+}
+
+header {
+  background: var(--color-primary-dark);
+  height: 10svh;
+  max-height: 14vw;
+  align-content: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1rem;
+  font-family: 'quiche-sans', sans-serif;
+  font-weight: 500;
+  color: var(--color-secondary-light);
+  font-style: italic;
+}
+
+h1 {
+  letter-spacing: 0.15rem;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+main {
+  display: flex;
+}
+
+ul {
+  text-align: left;
+  margin-left: 2rem;
+  list-style: none;
+}
+
+input,
+textarea {
+  background-color: var(--color-secondary-lightest);
+}
+
+button {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--color-secondary-light);
+  border-radius: 0.4rem;
+  background-color: var(--color-primary-dark);
+  transition: all ease-in-out 0.2s;
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    filter: brightness(1);
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+button.proj-list__btn-display-detail,
+button.task-input__btn-submit-add,
+button.task-list__btn-delete {
+  all: unset;
+  font-size: 1.5rem;
+  color: var(--color-secondary-light);
+  margin: 1rem;
+  transition: all ease-in-out 0.2s;
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  &:active {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+}
+
+/* Project List Section */
+
+.proj-list__section {
+  background: var(--color-primary);
+  min-width: 30%;
+  height: 95svh;
+}
+
+.proj-list__btn-add-proj {
+  padding-inline: 1rem;
+}
+
+button.proj-list__btn-display-detail {
+  color: inherit;
+  margin: 0 0 0.3rem;
+  font-weight: 400;
+}
+
+/* Projects and Tasks Section */
+
+.proj-and-tasks__sections {
+  min-width: 70%;
+  height: 95svh;
+  background: var(--color-primary-light);
+}
+
+/* Project Detail Section */
+
+.proj-detail__grp {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.proj-detail__data {
+  text-align: left;
+  margin-inline: 2rem;
+}
+
+.proj-detail__name {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.proj-detail__created-date-grp,
+.proj-detail__due-date-grp {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.proj-detail__description {
+  font-size: 1.2rem;
+}
+
+.proj-input__btn-submit-grp {
+  width: 100%;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.proj-input__submit-add-btn,
+.proj-input__submit-cancel-btn {
+  margin-right: 3rem;
+  width: 7rem;
+}
+
+.proj-input__form {
+  font-size: 1rem;
+  text-align: left;
+}
+.proj-input__grp {
+  margin: 2rem 1rem 0;
+}
+
+.proj-input__label,
+.proj-input__data {
+  display: inline-block;
+  font-size: 1.2rem;
+  width: 60vw;
+  padding: 0.5rem;
+}
+
+/* Tasks Section */
+.tasks-display-and-input__section {
+  margin-inline: 1rem;
+  text-align: left;
+  min-width: 70%;
+  background: var(--color-primary-light);
+}
+
+.task-input__form-section h2 {
+  font-size: 1.5rem;
+}
+
+.task-input__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.task-input__name {
+  width: 82%;
+  background: var(--color-secondary-light);
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+button.task-input__btn-submit-add {
+  font-size: 1rem;
+  width: 18%;
+  margin: 0 0 0 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.task-list {
+  margin-left: 1rem;
+}
+
+.task-list__item {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.task-list__task-name {
+  margin-left: 0.5rem;
+  width: 82%;
+}
+
+button.task-list__btn-delete {
+  font-size: 1rem;
+  line-height: normal;
+  margin: 0;
+  width: 18%;
+  text-align: center;
+}
+
+/* Messages */
+
+.proj-list__msg-none-created,
+.proj-detail__msg-none-selected,
+.task-list__msg-none-created {
+  font-size: 1.2rem;
+}
+
+.proj-list__msg-none-created {
+  margin-top: 0;
+}
+
+.task-list__msg-none-created {
+  margin-left: 1rem;
+}
+
+hr {
+  height: 2px;
+  background-color: var(--color-secondary-light);
+  border: none;
+}

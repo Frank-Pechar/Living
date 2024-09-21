@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Frank Pechar" />
+    <meta name="description" content="Life Planner by Frank Pechar" />
+    <link rel="stylesheet" href="https://use.typekit.net/qxz2igr.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <script defer src="assets/scripts/script.js"></script>
+    <title>Frank Pechar - Life Planner</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Life Planner</h1>
+    </header>
+    <main>
+      <section class="proj-list__section">
+        <h2>Projects</h2>
+        <button class="proj-list__btn-add-proj">Add Project</button>
+        <p class="proj-list__msg-none-created">No projects Created</p>
+        <ul class="proj-list">
+          <li class="proj-list__item">
+            <button class="proj-list__btn-display-detail"></button>
+          </li>
+        </ul>
+      </section>
+      <div class="proj-and-tasks__sections">
+        <section class="proj-detail__section">
+          <h2>Project Info</h2>
+          <p class="proj-detail__msg-none-selected">No projects selected</p>
+          <div class="proj-detail__data">
+            <div class="proj-detail__grp">
+              <p class="proj-detail__name"></p>
+              <button class="proj-detail__btn-delete-proj">Delete</button>
+            </div>
+            <p class="proj-detail__created-date-grp">
+              <span>Date Created: </span>
+              <span class="proj-detail__created-date"></span>
+            </p>
+            <p class="proj-detail__due-date-grp">
+              <span>Due Date: </span>
+              <span class="proj-detail__due-date"></span>
+            </p>
+            <p class="proj-detail__description"></p>
+            <br />
+            <hr />
+          </div>
+        </section>
+        <section class="proj-input__section">
+          <h2>Enter Project Info</h2>
+          <form class="proj-input__form">
+            <div class="proj-input__grp">
+              <label class="proj-input__label" for="projectName">Name:</label>
+              <input
+                class="proj-input__data"
+                type="text"
+                id="projectName"
+                name="projectName"
+              />
+            </div>
+            <div class="proj-input__grp">
+              <label class="proj-input__label" for="projectDescription"
+                >Description:</label
+              >
+              <textarea
+                class="proj-input__data"
+                id="projectDescription"
+                name="projectDescription"
+              ></textarea>
+            </div>
+            <div class="proj-input__grp">
+              <label class="proj-input__label" for="projectDueDate"
+                >End Date:</label
+              >
+              <input
+                type="date"
+                id="projectDueDate"
+                class="proj-input__data"
+                name="projectDueDate"
+              />
+            </div>
+            <div class="proj-input__btn-submit-grp">
+              <button class="proj-input__submit-add-btn" type="submit">
+                Save
+              </button>
+              <button class="proj-input__submit-cancel-btn" type="button">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <div class="tasks-display-and-input__section">
+          <section class="task-input__form-section">
+            <h2>Tasks</h2>
+            <form class="task-input__form">
+              <!-- <label for="task-input__name"></label> -->
+              <input
+                class="task-input__name"
+                type="text"
+                id="task-input__name"
+                name="taskName"
+              />
+
+              <button class="task-input__btn-submit-add" type="submit">
+                Add Task
+              </button>
+            </form>
+          </section>
+
+          <section class="task-list__section">
+            <p class="task-list__msg-none-created">No tasks for this project</p>
+            <ul class="task-list">
+              <li class="task-list__item">
+                <span class="task-list__task-name"></span>
+                <button class="task-list__btn-delete">Clear</button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
